@@ -148,10 +148,4 @@ COPY --chown=node:node --from=precompute_stage $APP_HOME/.pageinfo-cache.json.br
 
 # This makes it possible to set `--build-arg BUILD_SHA=abc123`
 # and it then becomes available as an environment variable in the docker run.
-ARG BUILD_SHA
-ENV BUILD_SHA=$BUILD_SHA
-
-# Entrypoint to start the server
-# Note: Currently we have to use tsx because
-# we have a mix of `.ts` and `.js` files with multiple import patterns
-CMD ["node_modules/.bin/tsx", "src/frame/server.ts"]
+A"node_modules/.bin/tsx", "src/frame/server.ts"]
